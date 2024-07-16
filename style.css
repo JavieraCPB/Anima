@@ -540,31 +540,28 @@ iframe{
     max-width: 100%; /* Asegura que las imágenes no excedan su tamaño original */
   }
 }
-.tipologias{
-    padding: 100px;
+.tipologias {
+    padding: 50px; /* Espaciado en todos los dispositivos */
     background-color: #414247;
     position: relative;
     min-height: 100vh;
 }
-.cardcontainer{
-    margin: 5px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
 
-   
-}
-.card{
+.cardcontainer {
+    margin: 5px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: relative;
-    width: 350px; /* Ajusta el ancho de la tarjeta */
-    height: 400px; /* Ajusta la altura de la tarjeta */
+    padding: 20px; /* Espaciado reducido para dispositivos móviles */
+}
+
+.card {
+    width: 90%; /* Ancho ajustado para dispositivos móviles */
+    max-width: 350px; /* Ancho máximo para escritorio */
+    height: auto; /* Altura automática para adaptarse al contenido */
     margin: 20px;
+    position: relative;
 }
 .card .face{
     position: absolute;
@@ -585,7 +582,7 @@ iframe{
     height: 100%;
     object-fit: cover;
 }
-.card .front h3{
+.card .front h3 {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -594,6 +591,7 @@ iframe{
     color: #fff;
     background-color: rgba(0,0,0,.4);
     text-align: center;
+    margin: 0;
 }
 .card .back {
     transform: perspective(600px) rotateY(180deg);
@@ -628,35 +626,8 @@ iframe{
 .card:hover .back{
     transform: perspective(600px) rotateY(360deg);
 }
-@media (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .card {
-        max-width: 100%; /* Tarjeta ocupa todo el ancho disponible */
-        margin: 20px auto; /* Margen automático para centrar la tarjeta */
-    }
-
-    .card .back h3 {
-        font-size: 20px; /* Ajusta el tamaño de fuente del título */
-    }
-
-    .card .back p {
-        font-size: 14px; /* Ajusta el tamaño de fuente del párrafo */
-    }
-}
-
-@media (max-width: 480px) {
-    .card{
-        max-width: 100px; /* Tarjeta ocupa todo el ancho disponible */
-        margin: 20px auto; /* Margen automático para centrar la tarjeta */
-    }
-    .card .front h3 {
-        font-size: 16px;
-    }
-
-    .card .back h3 {
-        font-size: 18px;
-    }
-
-    .card .back p {
-        font-size: 12px;
+        width: 350px; /* Ancho original para pantallas más grandes */
     }
 }
