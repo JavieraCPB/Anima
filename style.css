@@ -541,42 +541,69 @@ iframe{
   }
 }
 .tipologias {
-    padding: 50px; /* Ajusta el padding general */
+    padding: 50px; /* Espaciado general */
     background-color: #414247;
     position: relative;
     min-height: 100vh;
 }
 
 .cardcontainer {
-    margin: 5px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    padding: 20px; /* Reduce el padding para dispositivos móviles */
+    padding: 20px; /* Reducido para dispositivos móviles */
 }
 
 .card {
-    width: calc(50% - 40px); /* Ajusta el ancho de la tarjeta para dispositivos móviles */
-    max-width: 350px; /* Ancho máximo para escritorio */
-    height: auto; /* Altura automática para adaptarse al contenido */
+    width: calc(50% - 20px); /* Ajuste del ancho para dispositivos móviles */
+    max-width: 300px; /* Ancho máximo para escritorio */
     margin: 20px;
     position: relative;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.card .front {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Altura ajustable según tu contenido */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card .front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card .front h3 {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    background-color: rgba(0,0,0,.4);
-    text-align: center;
     margin: 0;
+    padding: 10px;
+    background-color: rgba(0,0,0,.4);
+    color: #fff;
+    text-align: center;
 }
-
 .card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     transform: perspective(600px) rotateY(180deg);
     background: rgb(135, 135, 135);
     padding: 15px;
@@ -585,59 +612,40 @@ iframe{
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    box-shadow: 0 5px 10px #000000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
-
 .card .back .link {
     border-top: solid 1px #f9fafc;
     height: 50px;
     line-height: 50px;
 }
-
-.card .back .link a {
+.card .back .link a{
     color: #f9fafc;
 }
-
 .card .back h3 {
-    font-size: 30px;
+    font-size: 24px;
     margin-top: 20px;
     letter-spacing: 2px;
 }
-
-.card .back p {
+.card .back p{
     letter-spacing: 1px;
 }
-
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
 @media screen and (max-width: 768px) {
     .card {
-        width: calc(50% - 20px); /* Ajusta el ancho para pantallas medianas */
-    }
-
-    .card .back h3 {
-        font-size: 24px; /* Ajusta el tamaño de fuente del título */
-    }
-
-    .card .back p {
-        font-size: 14px; /* Ajusta el tamaño de fuente del párrafo */
+        width: calc(50% - 20px); /* Ajuste para pantallas medianas */
     }
 }
 
 @media screen and (max-width: 480px) {
     .card {
-        width: calc(100% - 20px); /* Ajusta el ancho para pantallas pequeñas */
-        max-width: none; /* Elimina el ancho máximo para que ocupe todo el ancho disponible */
+        width: calc(100% - 20px); /* Ajuste para pantallas pequeñas */
     }
-
-    .card .front h3 {
-        font-size: 18px; /* Ajusta el tamaño de fuente del título */
-    }
-
-    .card .back h3 {
-        font-size: 20px; /* Ajusta el tamaño de fuente del título */
-    }
-
-    .card .back p {
-        font-size: 12px; /* Ajusta el tamaño de fuente del párrafo */
-    }
-}
 }
