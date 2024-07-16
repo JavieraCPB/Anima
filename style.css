@@ -466,7 +466,7 @@ iframe{
 }
 
 .containerfoto {
-  margin-top: 80px;
+  margin-top: 80px; /* Espacio debajo del menú en pantallas más grandes */
   width: 100%;
   display: flex;
   align-items: center;
@@ -512,7 +512,8 @@ iframe{
   .masonry {
     column-count: 1;
     column-gap: 10px;
-    max-width: 100%; /* Asegura que la galería ocupe el ancho completo del contenedor */
+    max-width: 100%; /* Ajusta el ancho máximo de la galería al 100% del contenedor */
+    margin: auto; /* Centra la galería en la pantalla */
   }
 
   .masonry img {
@@ -524,12 +525,13 @@ iframe{
 @media (max-width: 480px) {
   .containerfoto {
     margin-top: 140px;
-    margin: 5px;
-    padding: 5px;
+    margin: 5px; /* Ajusta el margen general */
+    padding: 5px; /* Ajusta el relleno interno */
   }
 
   .masonry {
-    max-width: 100%; /* Ajusta el ancho del contenedor al 100% del contenedor padre */
+    max-width: calc(100% - 10px); /* Ajusta el ancho del contenedor al 100% menos el margen */
+    margin: auto; /* Centra la galería en la pantalla */
   }
 
   .masonry img {
