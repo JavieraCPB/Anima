@@ -646,7 +646,7 @@ iframe{
 @media (max-width: 480px) {
     .card {
         width: 90%; /* Ajusta el ancho de la carta al 90% del contenedor padre */
-        max-width: 300px; /* Establece un ancho máximo para la carta */
+        max-width: 400px; /* Establece un ancho máximo para la carta */
         margin: 0 auto; /* Centra la carta horizontalmente */
     }
 }
