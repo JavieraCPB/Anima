@@ -465,37 +465,37 @@ iframe{
     }
 }
 .arte {
-    padding: 100px;
-    background-color: #414247;
-    position: relative;
-    min-height: 100vh;
-  }
-  
-  .containerfoto {
-    margin-top: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-  }
-  
-  .masonry {
-    column-count: 3;
-    column-gap: 30px;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .masonry img {
-    width: 100%;
-    margin-bottom: 30px;
-    break-inside: avoid;
-    border-radius: 10px;
-  }
-  
+  padding: 100px;
+  background-color: #414247;
+  position: relative;
+  min-height: 100vh;
+}
+
+.containerfoto {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.masonry {
+  column-count: 3;
+  column-gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.masonry img {
+  width: 100%;
+  margin-bottom: 30px;
+  break-inside: avoid;
+  border-radius: 10px;
+}
+
 @media (max-width: 1200px) {
   .masonry {
     column-count: 2;
@@ -531,20 +531,18 @@ iframe{
   .containerfoto {
     margin-top: 140px;
     margin: 10px;
-    padding: 5px; /* Reducir el padding para más espacio para la galería */
+    padding: 10px;
   }
 
   .masonry {
     max-width: 100%; /* Ajusta el ancho máximo de la galería al 100% */
-    column-gap: 5px; /* Reducir el espacio entre columnas para maximizar el uso del espacio */
   }
 
   .masonry img {
-    margin-bottom: 5px; /* Reducir el margen inferior para maximizar el uso del espacio */
-    width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
+    margin-bottom: 10px;
+    width: calc(100% - 20px); /* Asegura que las imágenes ocupen casi todo el contenedor, dejando un margen */
   }
 }
-  
 .tipologias{
     padding: 100px;
     background-color: #414247;
