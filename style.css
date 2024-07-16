@@ -530,19 +530,20 @@ iframe{
 @media (max-width: 480px) {
   .containerfoto {
     margin-top: 140px;
-    margin: 10px; /* Aquí puedes ajustar el margen general */
+    margin: 10px;
     padding: 10px;
   }
 
   .masonry {
     column-count: 1;
-    max-width: 100%; /* Ajusta el ancho máximo de la galería al 100% */
-    column-gap: -70%; /* Define un espacio proporcional al ancho del contenedor */
+    max-width: 90%; /* Reducí el ancho del contenedor al 90% del tamaño del contenedor padre */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    column-gap: 5%; /* Ajusté el espacio entre columnas */
   }
 
   .masonry img {
     margin-bottom: 10px;
-    width: 100%; /* Asegura que las imágenes ocupen todo el contenedor */
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
   }
 }
 .tipologias{
