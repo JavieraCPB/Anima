@@ -635,6 +635,10 @@ iframe{
         margin: 15px;
     }
 
+    .cardcontainer {
+        padding: 30px; /* Ajuste de padding */
+    }
+
     .card .front h3 {
         font-size: 16px; /* Tamaño de fuente */
         height: 40px; /* Altura del título */
