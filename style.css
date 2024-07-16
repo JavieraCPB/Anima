@@ -496,46 +496,51 @@ iframe{
     border-radius: 10px;
   }
   
-  @media (max-width: 1200px) {
-    .masonry {
-      column-count: 2;
-      column-gap: 20px;
-    }
-  
-    .containerfoto {
-      margin-top: 100px;
-      padding: 40px;
-    }
+@media (max-width: 1200px) {
+  .masonry {
+    column-count: 2;
+    column-gap: 20px;
   }
-  
-  @media (max-width: 768px) {
-    .masonry {
-      column-count: 1;
-      column-gap: 10px;
-    }
-  
-    .containerfoto {
-      margin-top: 120px;
-      margin: 20px;
-      padding: 20px;
-    }
-  
-    .masonry img {
-      margin-bottom: 20px;
-    }
+
+  .containerfoto {
+    margin-top: 100px;
+    padding: 40px;
   }
-  
-  @media (max-width: 480px) {
-    .containerfoto {
-      margin-top: 140px;
-      margin: 10px;
-      padding: 10px;
-    }
-  
-    .masonry img {
-      margin-bottom: 10px;
-    }
+}
+
+@media (max-width: 768px) {
+  .masonry {
+    column-count: 1;
+    column-gap: 10px;
   }
+
+  .containerfoto {
+    margin-top: 120px;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .masonry img {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerfoto {
+    margin-top: 140px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .masonry {
+    max-width: 90%; /* Ajusta el ancho máximo de la galería */
+  }
+
+  .masonry img {
+    margin-bottom: 10px;
+    width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
+  }
+}
   
 .tipologias{
     padding: 100px;
