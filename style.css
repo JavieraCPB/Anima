@@ -537,7 +537,7 @@ iframe{
   .masonry {
     column-count: 1;
     max-width: 100%; /* Ajusta el ancho máximo de la galería al 100% */
-    column-gap: 2%; /* Define un espacio proporcional al ancho del contenedor */
+    column-gap: 70%; /* Define un espacio proporcional al ancho del contenedor */
   }
 
   .masonry img {
