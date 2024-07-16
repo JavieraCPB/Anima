@@ -557,7 +557,7 @@ iframe{
 }
 
 .card {
-    width: 90%; /* Ancho ajustado para dispositivos móviles */
+    width: calc(50% - 40px); /* Ancho ajustado para dispositivos móviles */
     max-width: 350px; /* Ancho máximo para escritorio */
     height: auto; /* Altura automática para adaptarse al contenido */
     margin: 20px;
@@ -628,6 +628,6 @@ iframe{
 }
 @media screen and (min-width: 768px) {
     .card {
-        width: 350px; /* Ancho original para pantallas más grandes */
+        width: calc(33.33% - 40px); /* Ancho original para pantallas más grandes */
     }
 }
