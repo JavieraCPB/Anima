@@ -470,9 +470,11 @@ iframe{
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
     justify-content: center;
     padding: 50px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    flex-wrap: wrap; /* Permite que los elementos envuelvan en filas */
 }
 
 .masonry {
@@ -487,8 +489,9 @@ iframe{
     margin-bottom: 30px; /* Espacio entre imágenes */
     break-inside: avoid; /* Evita que las imágenes se rompan entre columnas */
     border-radius: 10px; /* Añadir un borde redondeado (opcional) */
-
 }
+
+/* Media Query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
     .masonry {
         column-count: 2; /* Reduce a 2 columnas */
@@ -501,6 +504,7 @@ iframe{
     }
 }
 
+/* Media Query para pantallas hasta 768px */
 @media (max-width: 768px) {
     .masonry {
         column-count: 1; /* Reduce a 1 columna */
@@ -517,6 +521,7 @@ iframe{
     }
 }
 
+/* Media Query para pantallas hasta 480px */
 @media (max-width: 480px) {
     .containerfoto {
         margin: 10px;
