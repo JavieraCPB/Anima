@@ -628,35 +628,50 @@ iframe{
 .card:hover .back{
     transform: perspective(600px) rotateY(360deg);
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .card {
-        max-width: 100%; /* Tarjeta ocupa todo el ancho disponible */
-        margin: 20px auto; /* Margen automático para centrar la tarjeta */
+        width: calc(50% - 40px); /* Ancho del 50% menos el margen */
+        max-width: 350px; /* Máximo ancho de la tarjeta */
+        margin: 15px;
+    }
+
+    .card .front h3 {
+        font-size: 16px; /* Tamaño de fuente */
+        height: 40px; /* Altura del título */
+        line-height: 40px; /* Line-height del título */
     }
 
     .card .back h3 {
-        font-size: 20px; /* Ajusta el tamaño de fuente del título */
+        font-size: 24px; /* Tamaño de fuente */
+        margin-top: 15px; /* Margen superior */
     }
 
     .card .back p {
-        font-size: 14px; /* Ajusta el tamaño de fuente del párrafo */
+        font-size: 14px; /* Tamaño de fuente */
     }
 }
 
 @media (max-width: 480px) {
-    .card{
-        max-width: 100px; /* Tarjeta ocupa todo el ancho disponible */
-        margin: 20px auto; /* Margen automático para centrar la tarjeta */
+    .card {
+        width: calc(100% - 40px); /* Ancho del 100% menos el margen */
+        max-width: none; /* Ningún máximo ancho */
+        height: auto; /* Altura automática */
+        margin: 10px 0; /* Margen */
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra */
     }
+
     .card .front h3 {
-        font-size: 16px;
+        font-size: 14px; /* Tamaño de fuente */
+        height: 35px; /* Altura del título */
+        line-height: 35px; /* Line-height del título */
     }
 
     .card .back h3 {
-        font-size: 18px;
+        font-size: 20px; /* Tamaño de fuente */
+        margin-top: 10px; /* Margen superior */
     }
 
     .card .back p {
-        font-size: 12px;
+        font-size: 12px; /* Tamaño de fuente */
     }
 }
