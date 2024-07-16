@@ -555,16 +555,16 @@ iframe{
 }
 
 .card {
-    width: calc(50% - 20px); /* Ajuste del ancho para dispositivos móviles */
-    max-width: 300px; /* Ancho máximo para escritorio */
+    width: calc(45% - 20px); /* Ajuste del ancho para dispositivos móviles */
+    max-width: 350px; /* Ancho máximo para escritorio */
     margin: 20px;
     position: relative;
     background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-
 }
+
 .card .face{
     position: absolute;
     width: 100%;
@@ -577,7 +577,7 @@ iframe{
 .card .front {
     position: relative;
     width: 100%;
-    height: 200px; /* Altura ajustable según tu contenido */
+    height: 250px; /* Altura ajustable según tu contenido */
     overflow: hidden;
     border-radius: 10px;
 }
@@ -614,7 +614,7 @@ iframe{
     text-align: center;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden;
+    overflow: auto; /* Habilita el scroll si el contenido es largo */
 }
 .card .back .link {
     border-top: solid 1px #f9fafc;
@@ -631,6 +631,7 @@ iframe{
 }
 .card .back p{
     letter-spacing: 1px;
+    line-height: 1.5; /* Ajusta el interlineado para mejorar la legibilidad */
 }
 .card:hover .front{
     transform: perspective(600px) rotateY(180deg);
@@ -642,10 +643,34 @@ iframe{
     .card {
         width: calc(50% - 20px); /* Ajuste para pantallas medianas */
     }
+
+    .card .front h3 {
+        font-size: 18px; /* Ajusta el tamaño de fuente del título */
+    }
+
+    .card .back h3 {
+        font-size: 20px; /* Ajusta el tamaño de fuente del título */
+    }
+
+    .card .back p {
+        font-size: 14px; /* Ajusta el tamaño de fuente del párrafo */
+    }
 }
 
 @media screen and (max-width: 480px) {
     .card {
         width: calc(100% - 20px); /* Ajuste para pantallas pequeñas */
+    }
+
+    .card .front h3 {
+        font-size: 16px; /* Ajusta el tamaño de fuente del título */
+    }
+
+    .card .back h3 {
+        font-size: 18px; /* Ajusta el tamaño de fuente del título */
+    }
+
+    .card .back p {
+        font-size: 12px; /* Ajusta el tamaño de fuente del párrafo */
     }
 }
