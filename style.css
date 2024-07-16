@@ -644,6 +644,10 @@ iframe{
 }
 
 @media (max-width: 480px) {
+    .card{
+        max-width: 100%; /* Tarjeta ocupa todo el ancho disponible */
+        margin: 20px auto; /* Margen automático para centrar la tarjeta */
+    }
     .card .front h3 {
         font-size: 16px;
     }
