@@ -546,27 +546,23 @@ iframe{
     position: relative;
     min-height: 100vh;
 }
-.cardcontainer{
+.cardcontainer {
     margin: 5px;
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 50px;
-
-   
 }
-.card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 350px; /* Ajusta el ancho de la tarjeta */
-    height: 400px; /* Ajusta la altura de la tarjeta */
+
+.card {
+    width: 350px; /* Ancho fijo de la tarjeta */
+    height: 400px; /* Alto fijo de la tarjeta */
     margin: 20px;
 }
-.card .face{
+
+.card .face {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -575,26 +571,31 @@ iframe{
     overflow: hidden;
     transition: .5s;
 }
-.card .front{
+
+.card .front {
     transform: perspective(600px) rotatey(0deg);
     box-shadow: 0 5px 10px #000000;
 }
-.card .front img{
+
+.card .front img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.card .front h3{
+
+.card .front h3 {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 45px;
     line-height: 45px;
     color: #fff;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, .4);
     text-align: center;
+    font-size: 18px;
 }
+
 .card .back {
     transform: perspective(600px) rotateY(180deg);
     background: rgb(135, 135, 135);
@@ -606,125 +607,87 @@ iframe{
     text-align: center;
     box-shadow: 0 5px 10px #000000;
 }
+
 .card .back .link {
     border-top: solid 1px #f9fafc;
     height: 50px;
     line-height: 50px;
 }
-.card .back .link a{
+
+.card .back .link a {
     color: #f9fafc;
 }
-.card .back h3{
+
+.card .back h3 {
     font-size: 30px;
     margin-top: 20px;
     letter-spacing: 2px;
 }
-.card .back p{
+
+.card .back p {
     letter-spacing: 1px;
 }
-.card:hover .front{
+
+.card:hover .front {
     transform: perspective(600px) rotateY(180deg);
 }
-.card:hover .back{
+
+.card:hover .back {
     transform: perspective(600px) rotateY(360deg);
 }
+
 @media (max-width: 991px) {
-    .tipologias {
-        padding: 50px; /* Reduces padding to make the section less spacious */
-        background-color: #414247;
-        position: relative;
-        min-height: 100vh;
+    .card {
+        width: 45%; /* Ajusta el ancho de la tarjeta al 45% del contenedor */
+        max-width: 350px; /* Ancho máximo de la tarjeta */
+        height: 400px; /* Mantén el alto de la tarjeta */
+        margin: 15px; /* Ajusta el margen de la tarjeta */
     }
 
     .cardcontainer {
-        margin: 5px;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap; /* Allows cards to wrap */
-        align-items: center;
-        justify-content: center;
-        padding: 20px; /* Reduces padding to make cards more compact */
-    }
-
-    .card {
-        width: 45%; /* Adjusts card width to 45% of the container */
-        max-width: 300px; /* Sets a maximum width for the card */
-        height: 400px; /* Maintains card height */
-        margin: 20px;
-    }
-
-    .card .face {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: .5s;
-    }
-
-    .card .front {
-        transform: perspective(600px) rotatey(0deg);
-        box-shadow: 0 5px 10px #000000;
-    }
-
-    .card .front img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        padding: 30px; /* Ajusta el relleno del contenedor */
     }
 
     .card .front h3 {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 45px;
-        line-height: 45px;
-        color: #fff;
-        background-color: rgba(0, 0, 0, .4);
-        text-align: center;
-        font-size: 18px; /* Adjusts font size for responsiveness */
-    }
-
-    .card .back {
-        transform: perspective(600px) rotateY(180deg);
-        background: rgb(135, 135, 135);
-        padding: 15px;
-        color: #f9fafc;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-        box-shadow: 0 5px 10px #000000;
-    }
-
-    .card .back .link {
-        border-top: solid 1px #f9fafc;
-        height: 50px;
-        line-height: 50px;
-    }
-
-    .card .back .link a {
-        color: #f9fafc;
+        font-size: 16px; /* Ajusta el tamaño de la fuente del título en la cara frontal */
+        height: 40px; /* Ajusta la altura del título en la cara frontal */
+        line-height: 40px; /* Ajusta la línea de altura del título en la cara frontal */
     }
 
     .card .back h3 {
-        font-size: 24px; /* Adjusts font size for responsiveness */
-        margin-top: 20px;
-        letter-spacing: 1px;
+        font-size: 24px; /* Ajusta el tamaño de la fuente del título en la cara trasera */
+        margin-top: 15px; /* Ajusta el margen superior del título en la cara trasera */
     }
 
     .card .back p {
-        font-size: 14px; /* Adjusts font size for responsiveness */
-        letter-spacing: 1px;
+        font-size: 14px; /* Ajusta el tamaño de la fuente del texto en la cara trasera */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Ajusta el ancho de la tarjeta al 100% del contenedor */
+        max-width: none; /* Elimina el ancho máximo de la tarjeta */
+        height: auto; /* Ajusta automáticamente la altura de la tarjeta */
+        margin: 10px 0; /* Ajusta el margen de la tarjeta */
     }
 
-    .card:hover .front {
-        transform: perspective(600px) rotateY(180deg);
+    .cardcontainer {
+        padding: 20px; /* Ajusta el relleno del contenedor */
     }
 
-    .card:hover .back {
-        transform: perspective(600px) rotateY(360deg);
+    .card .front h3 {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del título en la cara frontal */
+        height: 35px; /* Ajusta la altura del título en la cara frontal */
+        line-height: 35px; /* Ajusta la línea de altura del título en la cara frontal */
+    }
+
+    .card .back h3 {
+        font-size: 20px; /* Ajusta el tamaño de la fuente del título en la cara trasera */
+        margin-top: 10px; /* Ajusta el margen superior del título en la cara trasera */
+    }
+
+    .card .back p {
+        font-size: 12px; /* Ajusta el tamaño de la fuente del texto en la cara trasera */
     }
 }
