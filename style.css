@@ -540,52 +540,31 @@ iframe{
     max-width: 100%; /* Asegura que las imágenes no excedan su tamaño original */
   }
 }
-.tipologias{
-    padding: 100px;
+.tipologias {
+    padding: 50px; /* Ajusta el padding general */
     background-color: #414247;
     position: relative;
     min-height: 100vh;
 }
-.cardcontainer{
-    margin: 5px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
 
-   
-}
-.card{
+.cardcontainer {
+    margin: 5px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: relative;
-    width: 350px; /* Ajusta el ancho de la tarjeta */
-    height: 400px; /* Ajusta la altura de la tarjeta */
+    padding: 20px; /* Reduce el padding para dispositivos móviles */
+}
+
+.card {
+    width: calc(50% - 40px); /* Ajusta el ancho de la tarjeta para dispositivos móviles */
+    max-width: 350px; /* Ancho máximo para escritorio */
+    height: auto; /* Altura automática para adaptarse al contenido */
     margin: 20px;
+    position: relative;
 }
-.card .face{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: .5s;
-}
-.card .front{
-    transform: perspective(600px) rotatey(0deg);
-    box-shadow: 0 5px 10px #000000;
-}
-.card .front img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card .front h3{
+
+.card .front h3 {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -594,7 +573,9 @@ iframe{
     color: #fff;
     background-color: rgba(0,0,0,.4);
     text-align: center;
+    margin: 0;
 }
+
 .card .back {
     transform: perspective(600px) rotateY(180deg);
     background: rgb(135, 135, 135);
@@ -606,36 +587,34 @@ iframe{
     text-align: center;
     box-shadow: 0 5px 10px #000000;
 }
+
 .card .back .link {
     border-top: solid 1px #f9fafc;
     height: 50px;
     line-height: 50px;
 }
-.card .back .link a{
+
+.card .back .link a {
     color: #f9fafc;
 }
-.card .back h3{
+
+.card .back h3 {
     font-size: 30px;
     margin-top: 20px;
     letter-spacing: 2px;
 }
-.card .back p{
+
+.card .back p {
     letter-spacing: 1px;
 }
-.card:hover .front{
-    transform: perspective(600px) rotateY(180deg);
-}
-.card:hover .back{
-    transform: perspective(600px) rotateY(360deg);
-}
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
     .card {
-        max-width: 100%; /* Tarjeta ocupa todo el ancho disponible */
-        margin: 20px auto; /* Margen automático para centrar la tarjeta */
+        width: calc(50% - 20px); /* Ajusta el ancho para pantallas medianas */
     }
 
     .card .back h3 {
-        font-size: 20px; /* Ajusta el tamaño de fuente del título */
+        font-size: 24px; /* Ajusta el tamaño de fuente del título */
     }
 
     .card .back p {
@@ -643,20 +622,22 @@ iframe{
     }
 }
 
-@media (max-width: 480px) {
-    .card{
-        max-width: 100px; /* Tarjeta ocupa todo el ancho disponible */
-        margin: 20px auto; /* Margen automático para centrar la tarjeta */
+@media screen and (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px); /* Ajusta el ancho para pantallas pequeñas */
+        max-width: none; /* Elimina el ancho máximo para que ocupe todo el ancho disponible */
     }
+
     .card .front h3 {
-        font-size: 16px;
+        font-size: 18px; /* Ajusta el tamaño de fuente del título */
     }
 
     .card .back h3 {
-        font-size: 18px;
+        font-size: 20px; /* Ajusta el tamaño de fuente del título */
     }
 
     .card .back p {
-        font-size: 12px;
+        font-size: 12px; /* Ajusta el tamaño de fuente del párrafo */
     }
+}
 }
