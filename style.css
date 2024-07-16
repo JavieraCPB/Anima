@@ -628,25 +628,103 @@ iframe{
 .card:hover .back{
     transform: perspective(600px) rotateY(360deg);
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+    .tipologias {
+        padding: 50px; /* Reduces padding to make the section less spacious */
+        background-color: #414247;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    .cardcontainer {
+        margin: 5px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap; /* Allows cards to wrap */
+        align-items: center;
+        justify-content: center;
+        padding: 20px; /* Reduces padding to make cards more compact */
+    }
+
     .card {
-        max-width: 100%; /* Tarjeta ocupa todo el ancho disponible */
-        margin: 20px auto; /* Margen automático para centrar la tarjeta */
+        width: 45%; /* Adjusts card width to 45% of the container */
+        max-width: 300px; /* Sets a maximum width for the card */
+        height: 400px; /* Maintains card height */
+        margin: 20px;
+    }
+
+    .card .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    .card .front {
+        transform: perspective(600px) rotatey(0deg);
+        box-shadow: 0 5px 10px #000000;
+    }
+
+    .card .front img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card .front h3 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, .4);
+        text-align: center;
+        font-size: 18px; /* Adjusts font size for responsiveness */
+    }
+
+    .card .back {
+        transform: perspective(600px) rotateY(180deg);
+        background: rgb(135, 135, 135);
+        padding: 15px;
+        color: #f9fafc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0 5px 10px #000000;
+    }
+
+    .card .back .link {
+        border-top: solid 1px #f9fafc;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .card .back .link a {
+        color: #f9fafc;
     }
 
     .card .back h3 {
-        font-size: 20px; /* Ajusta el tamaño de fuente del título */
+        font-size: 24px; /* Adjusts font size for responsiveness */
+        margin-top: 20px;
+        letter-spacing: 1px;
     }
 
     .card .back p {
-        font-size: 14px; /* Ajusta el tamaño de fuente del párrafo */
+        font-size: 14px; /* Adjusts font size for responsiveness */
+        letter-spacing: 1px;
     }
-}
 
-@media (max-width: 480px) {
-    .card {
-        width: 200px; /* Ajusta el ancho de la carta al 90% del contenedor padre */
-        max-width: 400px; /* Establece un ancho máximo para la carta */
-        margin: 0 auto; /* Centra la carta horizontalmente */
+    .card:hover .front {
+        transform: perspective(600px) rotateY(180deg);
+    }
+
+    .card:hover .back {
+        transform: perspective(600px) rotateY(360deg);
     }
 }
