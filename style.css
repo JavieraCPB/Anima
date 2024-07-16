@@ -529,15 +529,16 @@ iframe{
   .containerfoto {
     margin-top: 140px;
     margin: 10px;
-    padding: 10px;
+    padding: 5px; /* Reducir el padding para más espacio para la galería */
   }
 
   .masonry {
-    max-width: 90%; /* Ajusta el ancho máximo de la galería */
+    max-width: 100%; /* Ajusta el ancho máximo de la galería al 100% */
+    column-gap: 5px; /* Reducir el espacio entre columnas para maximizar el uso del espacio */
   }
 
   .masonry img {
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reducir el margen inferior para maximizar el uso del espacio */
     width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
   }
 }
