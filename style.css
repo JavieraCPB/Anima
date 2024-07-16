@@ -464,12 +464,6 @@ iframe{
         height: 300px; /* Ajusta la altura del iframe */
     }
 }
-.arte {
-  padding: 100px;
-  background-color: #414247;
-  position: relative;
-  min-height: 100vh;
-}
 
 .containerfoto {
   margin-top: 80px;
