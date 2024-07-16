@@ -649,16 +649,4 @@ iframe{
         max-width: 300px; /* Establece un ancho máximo para la carta */
         margin: 0 auto; /* Centra la carta horizontalmente */
     }
-
-    .card .front h3 {
-        font-size: 16px;
-    }
-
-    .card .back h3 {
-        font-size: 18px;
-    }
-
-    .card .back p {
-        font-size: 12px;
-    }
 }
