@@ -466,72 +466,69 @@ iframe{
 }
 
 .containerfoto {
-    margin-top: 80px; /* Ajusta el margen superior para evitar que las imágenes se superpongan con el menú */
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-    flex-wrap: wrap; /* Permite que los elementos envuelvan en filas */
+  margin-top: 80px; /* Añadir margen superior para separar del menú */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .masonry {
-    column-count: 3; /* Número de columnas */
-    column-gap: 30px; /* Espacio entre columnas */
-    max-width: 1000px;
-    margin: auto;
+  column-count: 3; /* Número de columnas */
+  column-gap: 30px; /* Espacio entre columnas */
+  max-width: 1000px;
+  margin: auto;
 }
 
 .masonry img {
-    width: 100%;
-    margin-bottom: 30px; /* Espacio entre imágenes */
-    break-inside: avoid; /* Evita que las imágenes se rompan entre columnas */
-    border-radius: 10px; /* Añadir un borde redondeado (opcional) */
+  width: 100%;
+  margin-bottom: 30px; /* Espacio entre imágenes */
+  break-inside: avoid; /* Evita que las imágenes se rompan entre columnas */
+  border-radius: 10px; /* Añadir un borde redondeado (opcional) */
 }
 
-/* Media Query para pantallas hasta 1200px */
 @media (max-width: 1200px) {
-    .masonry {
-        column-count: 2; /* Reduce a 2 columnas */
-        column-gap: 20px; /* Reduce el espacio entre columnas */
-    }
+  .masonry {
+    column-count: 2; /* Reduce a 2 columnas */
+    column-gap: 20px; /* Reduce el espacio entre columnas */
+  }
 
-    .containerfoto {
-        margin: 40px;
-        padding: 40px;
-    }
+  .containerfoto {
+    margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+    padding: 40px;
+  }
 }
 
-/* Media Query para pantallas hasta 768px */
 @media (max-width: 768px) {
-    .masonry {
-        column-count: 1; /* Reduce a 1 columna */
-        column-gap: 10px; /* Reduce aún más el espacio entre columnas */
-    }
+  .masonry {
+    column-count: 1; /* Reduce a 1 columna */
+    column-gap: 10px; /* Reduce aún más el espacio entre columnas */
+  }
 
-    .containerfoto {
-        margin: 60px;
-        padding: 20px;
-    }
+  .containerfoto {
+    margin-top: 120px; /* Ajusta el margen superior según sea necesario */
+    margin: 20px;
+    padding: 20px;
+  }
 
-    .masonry img {
-        margin-bottom: 20px; /* Reduce el espacio entre imágenes */
-    }
+  .masonry img {
+    margin-bottom: 20px; /* Reduce el espacio entre imágenes */
+  }
 }
 
-/* Media Query para pantallas hasta 480px */
 @media (max-width: 480px) {
-    .containerfoto {
-        margin: 100px;
-        padding: 30px;
-    }
+  .containerfoto {
+    margin-top: 140px; /* Ajusta el margen superior según sea necesario */
+    margin: 10px;
+    padding: 10px;
+  }
 
-    .masonry img {
-        margin-bottom: 20px; /* Reduce aún más el espacio entre imágenes */
-    }
+  .masonry img {
+    margin-bottom: 10px; /* Reduce aún más el espacio entre imágenes */
+  }
 }
 
 .tipologias{
