@@ -530,13 +530,14 @@ iframe{
 @media (max-width: 480px) {
   .containerfoto {
     margin-top: 140px;
-    margin: 10px;
+    margin: 10px; /* Aquí puedes ajustar el margen general */
     padding: 10px;
   }
 
   .masonry {
     column-count: 1;
     max-width: 100%; /* Ajusta el ancho máximo de la galería al 100% */
+    column-gap: 2%; /* Define un espacio proporcional al ancho del contenedor */
   }
 
   .masonry img {
