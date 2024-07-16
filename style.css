@@ -525,7 +525,7 @@ iframe{
 /* Media Query para pantallas hasta 480px */
 @media (max-width: 480px) {
     .containerfoto {
-        margin: 10px;
+        margin: 80px;
         padding: 10px;
     }
 
