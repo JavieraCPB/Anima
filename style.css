@@ -525,12 +525,12 @@ iframe{
 /* Media Query para pantallas hasta 480px */
 @media (max-width: 480px) {
     .containerfoto {
-        margin: 80px;
-        padding: 10px;
+        margin: 100px;
+        padding: 30px;
     }
 
     .masonry img {
-        margin-bottom: 10px; /* Reduce aún más el espacio entre imágenes */
+        margin-bottom: 20px; /* Reduce aún más el espacio entre imágenes */
     }
 }
 
