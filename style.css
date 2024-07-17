@@ -464,7 +464,6 @@ iframe{
         height: 300px; /* Ajusta la altura del iframe */
     }
 }
-
 .containerfoto {
   margin-top: 80px; /* Espacio debajo del menú en pantallas más grandes */
   width: 100%;
@@ -515,7 +514,7 @@ iframe{
     margin-left: 20px;
     margin-right: 20px;
     padding: 20px;
-    justify-content: flex-start; /* Alinea la galería a la izquierda en dispositivos móviles */
+    justify-content: center; /* Centra la galería horizontalmente en dispositivos móviles */
   }
 
   .masonry {
