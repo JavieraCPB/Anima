@@ -508,11 +508,29 @@ iframe{
   }
 }
 
+@media (max-width: 896px) {
+  .containerfoto {
+    margin-top: 120px;
+    padding: 20px;
+    justify-content: center; /* Centra la galería horizontalmente en dispositivos móviles */
+  }
+
+  .masonry {
+    column-count: 2;
+    column-gap: 20px;
+    max-width: calc(100% - 40px); /* Ajusta el ancho máximo de la galería al 100% menos el margen izquierdo y derecho */
+    margin: auto; /* Centra la galería en la pantalla */
+  }
+
+  .masonry img {
+    margin-bottom: 20px;
+    width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
+  }
+}
+
 @media (max-width: 768px) {
   .containerfoto {
     margin-top: 120px;
-    margin-left: 20px;
-    margin-right: 20px;
     padding: 20px;
     justify-content: center; /* Centra la galería horizontalmente en dispositivos móviles */
   }
@@ -533,20 +551,20 @@ iframe{
 @media (max-width: 480px) {
   .containerfoto {
     margin-top: 140px;
-    margin-left: 5px; /* Ajusta el margen izquierdo */
-    margin-right: 5px; /* Ajusta el margen derecho */
     padding: 10px; /* Ajusta el relleno interno */
+    justify-content: center; /* Centra la galería horizontalmente en dispositivos móviles */
   }
 
   .masonry {
-    max-width: calc(100% - 10px); /* Ajusta el ancho del contenedor al 100% menos el margen */
+    column-count: 1;
+    column-gap: 10px;
+    max-width: calc(100% - 20px); /* Ajusta el ancho máximo de la galería al 100% menos el margen */
     margin: auto; /* Centra la galería en la pantalla */
   }
 
   .masonry img {
     margin-bottom: 10px;
-    width: calc(100% - 20px); /* Ajusta el ancho de las imágenes para dejar espacio para el margen */
-    max-width: 100%; /* Asegura que las imágenes no excedan su tamaño original */
+    width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
   }
 }
 
