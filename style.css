@@ -35,20 +35,20 @@ body{
 .menu {
     width: 100%;
     position: absolute;
-    top: 10px; /* Ajusta el margen superior del menú */
+    top: 0;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: ; /* Añade aquí el color de fondo deseado */
+    background-color: ;
     z-index: 2; /* Asegura que el menú tenga un z-index más alto */
 }
 
 .logo {
     color: #fffdfc;
-    font-size: 27px;
+    font-size: 30px;
     font-weight: 800;
 }
 
@@ -56,7 +56,7 @@ body{
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Asegura flexbox por defecto */
+    display: flex; /* Asegurar flexbox por defecto */
 }
 
 .menu .navbar ul li {
